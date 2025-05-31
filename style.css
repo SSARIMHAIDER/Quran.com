@@ -78,6 +78,128 @@ body {
               url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="%2300ffff" opacity="0.3"/><circle cx="80" cy="80" r="2" fill="%23ff00ff" opacity="0.3"/><circle cx="60" cy="30" r="1" fill="%2300ff00" opacity="0.5"/></svg>');
 }
 
+.logo-section {
+  margin-bottom: 3rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.robot-icon {
+  font-size: 4rem;
+  color: #00ffff;
+  animation: robotFloat 3s ease-in-out infinite;
+}
+
+.robot-icon:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.robot-icon:nth-child(3) {
+  animation-delay: 1.5s;
+}
+
+@keyframes robotFloat {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg);
+    color: #00ffff;
+  }
+  25% { 
+    transform: translateY(-10px) rotate(5deg);
+    color: #ff00ff;
+  }
+  50% { 
+    transform: translateY(-5px) rotate(0deg);
+    color: #00ff00;
+  }
+  75% { 
+    transform: translateY(-15px) rotate(-5deg);
+    color: #ffff00;
+  }
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.perception, .code {
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  line-height: 0.9;
+}
+
+.perception {
+  color: #00ffff;
+  text-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+  animation: logoGlow1 2s ease-in-out infinite alternate;
+}
+
+.code {
+  color: #ff00ff;
+  text-shadow: 0 0 20px rgba(255, 0, 255, 0.8);
+  animation: logoGlow2 2s ease-in-out infinite alternate;
+}
+
+@keyframes logoGlow1 {
+  from {
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+  }
+  to {
+    text-shadow: 0 0 40px rgba(0, 255, 255, 1), 0 0 60px rgba(0, 255, 255, 0.8);
+  }
+}
+
+@keyframes logoGlow2 {
+  from {
+    text-shadow: 0 0 20px rgba(255, 0, 255, 0.8);
+  }
+  to {
+    text-shadow: 0 0 40px rgba(255, 0, 255, 1), 0 0 60px rgba(255, 0, 255, 0.8);
+  }
+}
+
+.creator-name {
+  margin-top: 1rem;
+}
+
+.name-glow {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00ffff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+  animation: nameGlow 3s ease-in-out infinite;
+}
+
+@keyframes nameGlow {
+  0%, 100% {
+    color: #00ffff;
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.6);
+  }
+  25% {
+    color: #ff00ff;
+    text-shadow: 0 0 25px rgba(255, 0, 255, 0.8), 0 0 50px rgba(255, 0, 255, 0.6);
+  }
+  50% {
+    color: #00ff00;
+    text-shadow: 0 0 30px rgba(0, 255, 0, 0.8), 0 0 60px rgba(0, 255, 0, 0.6);
+  }
+  75% {
+    color: #ffff00;
+    text-shadow: 0 0 25px rgba(255, 255, 0, 0.8), 0 0 50px rgba(255, 255, 0, 0.6);
+  }
+}
+
 .hero-content h1 {
   font-size: 4rem;
   margin-bottom: 1rem;
@@ -503,6 +625,24 @@ body {
   .nav-menu {
     flex-direction: column;
     gap: 1rem;
+  }
+  
+  .logo-container {
+    gap: 1rem;
+  }
+  
+  .robot-icon {
+    font-size: 2.5rem;
+  }
+  
+  .perception, .code {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+  
+  .name-glow {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
   }
   
   .hero-content h1 {
