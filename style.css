@@ -91,7 +91,7 @@ body {
 }
 
 .robot-icon {
-  font-size: 4rem;
+  font-size: 2.5rem;
   color: #00ffff;
   animation: robotFloat 3s ease-in-out infinite;
 }
