@@ -331,6 +331,30 @@ body {
   margin-bottom: 1rem;
 }
 
+.profile-name-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.profile-name-header h1 {
+  font-size: 3rem;
+  color: #00ffff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  }
+  to {
+    text-shadow: 0 0 30px rgba(0, 255, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.6);
+  }
+}
+
 .profile-container {
   display: flex;
   justify-content: center;
