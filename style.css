@@ -86,8 +86,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
-  margin-bottom: 2rem;
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
 
 .robot-icon {
@@ -130,10 +130,10 @@ body {
 }
 
 .perception, .code {
-  font-size: 4.5rem;
+  font-size: 3rem;
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 6px;
+  letter-spacing: 4px;
   line-height: 0.8;
 }
 
