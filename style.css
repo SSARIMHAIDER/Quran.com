@@ -359,6 +359,21 @@ body {
   margin-bottom: 2rem;
 }
 
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00ffff;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+}
+
 .profile-info h3 {
   color: #00ffff;
   font-size: 2rem;
