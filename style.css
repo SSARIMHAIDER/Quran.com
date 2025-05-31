@@ -131,10 +131,10 @@ body {
 }
 
 .perception, .code {
-  font-size: 5rem;
+  font-size: 3.8rem;
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 6px;
+  letter-spacing: 5px;
   line-height: 0.8;
 }
 
