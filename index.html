@@ -1,57 +1,132 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quran.com | Modern Experience</title>
-    <meta name="description" content="A premium, modern experience for exploring the Holy Quran.">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="logo">Quran.com</div>
+<<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>QURAN.COM</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <header>
+            <h1>السلام عليكم</h1>
+            <p>Welcome to QURAN.COM</p>
+            <button onclick="toggleTheme()">Toggle Theme</button>
+        </header>
+
         <nav>
-            <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#surahs">Surahs</a></li>
-                <li><a href="#about">About</a></li>
-            </ul>
+            <button onclick="showPage('home')">Home</button>
+            <button onclick="showPage('recite')">Recite</button>
+            <button onclick="showPage('learn')">Learn</button>
+            <button onclick="showPage('premium')">Premium</button>
+            <button onclick="showPage('leaderboard')">Leaderboard</button>
+            <button onclick="showPage('profile')">Profile</button>
+            <button onclick="showPage('about')">About</button>
         </nav>
-    </header>
 
-    <main>
-        <section id="hero" class="hero">
-            <h1>The Noble Quran</h1>
-            <p>Experience the divine guidance with our modern, sleek interface designed for reflection and learning.</p>
-            <a href="#surahs" class="btn-primary">Explore Surahs</a>
-        </section>
+        <main>
 
-        <section id="surahs">
-            <h2 class="section-title">Featured Surahs</h2>
-            <div class="card-container">
+            <section id="home" class="page">
+                <h2>How To Use</h2>
+                <p>1. Sign in</p>
+                <p>2. Recite Quran</p>
+                <p>3. Learn Islam</p>
+                <p>4. Track your progress</p>
+            </section>
+
+            <section id="recite" class="page">
+                <h2>Quran Recitation</h2>
+                <button onclick="startRecitation()">Start Reciting</button>
+                <p id="recitationText"></p>
+            </section>
+
+            <section id="learn" class="page">
+                <h2>Islamic Learning</h2>
+
+                <h3>How to Pray Salah</h3>
+                <p>Face the Qibla, make intention, and follow the prayer steps.</p>
+
+                <h3>Tarawih</h3>
+                <p>Tarawih is prayed after Isha in Ramadan.</p>
+
+                <h3>Daily Duas</h3>
+                <p>Remember Allah in the morning and evening.</p>
+
+                <h3>Hadith</h3>
+                <p>The Prophet ﷺ said: The best among you are those who learn the Qur'an and teach it.</p>
+
+            </section>
+
+            <section id="premium" class="page">
+                <h2>Premium Plans</h2>
+
                 <div class="card">
-                    <h3>Al-Fatiha</h3>
-                    <p class="arabic-text">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
-                    <p>The Opening</p>
+                    <h3>3 Day Trial</h3>
+                    <p>$1</p>
+                    <button onclick="buy('trial')">Buy</button>
                 </div>
-                <div class="card">
-                    <h3>Al-Baqarah</h3>
-                    <p class="arabic-text">الم ذَٰلِكَ الْكِتَابُ لَا رَيْبَ ۛ فِيهِ</p>
-                    <p>The Cow</p>
-                </div>
-                <div class="card">
-                    <h3>Ya-Sin</h3>
-                    <p class="arabic-text">يس وَالْقُرْآنِ الْحَكِيمِ</p>
-                    <p>Ya-Sin</p>
-                </div>
-            </div>
-        </section>
-    </main>
 
-    <footer>
-        <p>&copy; 2026 Quran.com Modern Design. All rights reserved.</p>
-    </footer>
+                <div class="card">
+                    <h3>Monthly</h3>
+                    <p>$10</p>
+                    <button onclick="buy('month')">Buy</button>
+                </div>
 
-    <script src="script.js"></script>
-</body>
-</html>
+                <div class="card">
+                    <h3>Arabic Course</h3>
+                    <p>$5</p>
+                    <button onclick="buy('course')">Buy</button>
+                </div>
+
+                <p>Payment methods:</p>
+                <p>Card • EasyPaisa • JazzCash</p>
+
+                <input id="premiumCode" placeholder="Enter premium code">
+                <button onclick="useCode()">Use Code</button>
+
+            </section>
+
+            <section id="leaderboard" class="page">
+                <h2>Leaderboard</h2>
+
+                <ul id="board">
+                    <li>Ahmed — 120 min</li>
+                    <li>Fatima — 95 min</li>
+                    <li>Ali — 80 min</li>
+                </ul>
+
+            </section>
+
+            <section id="profile" class="page">
+                <h2>Profile</h2>
+
+                <input placeholder="Username">
+                <input placeholder="Email">
+
+                <button onclick="saveProfile()">Save</button>
+
+            </section>
+
+            <section id="about" class="page">
+                <h2>About</h2>
+
+                <p>App: QURAN.COM</p>
+                <p>Purpose: Help Muslims improve Quran recitation.</p>
+                <p>Owner: Your Name</p>
+
+            </section>
+
+        </main>
+
+        <footer>
+            <p>© QURAN.COM</p>
+            <button onclick="rate()">Rate App</button>
+        </footer>
+
+        <script src="script.js"></script>
+
+    </body>
+
+    </html>
